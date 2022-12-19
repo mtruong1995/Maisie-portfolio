@@ -2,17 +2,36 @@
   box-sizing: border-box;
 }
 
+:root {
+  --primary: lightblue;
+  --secondary: rgb(89, 158, 210);
+  --tertiary: rgb(255, 176, 248);
+  --dark: rgb(74, 74, 74);
+  --light: white;
+
+
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   line-height: 1.5;
-  background-color: lightblue;
+
 
 }
 
 h1,
-h2,
+
+.page-section > h2 {
+flex: 0 0 20%;
+text-align: right;
+padding-right: 20px;
+border-right: 5px solid var(--secondary);
+font-size: 4vw;
+line-height: 1.1;
+
+}
 h3,
 h4,
 h5,
@@ -25,5 +44,152 @@ p {
 }
 
 header {
-  padding:15px 6p
+  padding:30px 0 15px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: var(--secondary);
+
 }
+
+nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+nav a {
+  text-decoration: none;
+  padding: 5px 10px;
+  color: var(--primary);
+  margin-right: 10px;
+  background-image: linear-gradient(260deg, var(--tertiary) 0%, var(--secondary) 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 0.2em;
+  background-position: bottom;
+  transition: all 0.25s ease-in;
+  font-size: 1.4rem;
+
+}
+
+nav a:last-child {
+  margin-right: 0;
+}
+
+nav a:hover {
+  background-size: 100% 100%;
+  color: var(--dark);
+}
+
+.hero-banner {
+  background-color: var(--dark);
+  background-image: url(../images/02-hero-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: soft-light;
+  min-height: 150px;
+  color:var(--light);
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  align-items: flex-end;
+  text-align: right;
+
+
+}
+
+.hero-banner div {
+  flex: 0 0 90%;
+}
+
+.hero-banner h2 {
+  background-color: var(--primary);
+  color: var(--dark);
+  margin: 0;
+  padding: 5px 10px;
+  font-size: 2.3rem;
+  line-height: 1.2;
+  display: inline;
+}
+
+.page-wrapper {
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page-section {
+  margin: 20px 0;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: space-between;
+
+}
+
+.page-section > div {
+  flex: 0 0 70%;
+}
+
+.page-section p {
+  margin-bottom: 20px;
+}
+
+.flex-contatiner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.flex-item {
+  border: 5px solid var(--secondary);
+  background-color: var(--tertiary);
+  color: var(--light);
+  min-height: 200px;
+  max-height: 200px;
+  flex-basis: calc(50% - 1em);
+  display: flex;
+  align-items: flex-start;
+  padding: 0 0 20px 0;
+  margin: 0.5em;
+  text-decoration: none;
+  background-blend-mode: soft-light;
+  background-size: 150%;
+  transition: all 0.5s;
+  font-size: 0.9rem;
+
+}
+
+.pictures {
+  max-width: 150px;
+}
+
+.flex-item:hover {
+  background-color: var(--dark);
+}
+
+.contact address a {
+  color: var(--dark);
+  padding: 5px;
+  text-decoration: none;
+  font-style: normal;
+  margin-right: 10px;
+  background-image: linear-gradient(260deg, var(--tertiary) 0%, white 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 0.2em;
+  background-position: bottom;
+  transition: all 0.25s ease-in;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.contact address a:hover{
+  color: var(--tertiary);
+}
+
